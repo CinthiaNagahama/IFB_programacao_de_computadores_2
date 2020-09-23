@@ -10,6 +10,14 @@ public class Pedido {
 	protected int quantidade;
 	protected float valor;
 	
+	public Pedido(String codigo, DataPadraoBrasil datapedido, ArrayList<Livro> listalivro, int quantidade, float valor) {
+		this.codigo = codigo;
+		this.datapedido = datapedido;
+		this.listalivro = listalivro;
+		this.quantidade = quantidade;
+		this.valor = valor;
+	}
+	
 	// Getters e Setters
 	public String getCodigo() {
 		return codigo;

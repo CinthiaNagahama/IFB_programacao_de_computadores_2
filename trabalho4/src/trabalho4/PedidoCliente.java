@@ -1,10 +1,19 @@
 package trabalho4;
 
+import java.util.ArrayList;
+
 import util.*;
 
 public class PedidoCliente extends Pedido{
 	private String codcliente;
 	private DataPadraoBrasil dataremessa;
+	
+	public PedidoCliente(String codigo, DataPadraoBrasil datapedido, ArrayList<Livro> listalivro, int quantidade, float valor, 
+							String codcliente, DataPadraoBrasil dataremessa) {
+		super(codigo, datapedido, listalivro, quantidade, valor);
+		this.codcliente = codcliente;
+		this.dataremessa = dataremessa;
+	}
 	
 	// Getters e Setters
 	public String getCodcliente() {

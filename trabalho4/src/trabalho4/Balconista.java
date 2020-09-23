@@ -5,6 +5,12 @@ public class Balconista {
 	protected String senha;
 	protected int nivelacesso;
 
+	public Balconista(String nomeusuario, String senha, int nivelacesso) {
+		this.nomeusuario = nomeusuario;
+		this.senha = senha;
+		this.nivelacesso = nivelacesso;
+	}
+	
 	// Getters e Setters
 	public String getNomeusuario() {
 		return nomeusuario;

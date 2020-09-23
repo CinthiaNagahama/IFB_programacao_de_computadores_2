@@ -10,6 +10,17 @@ public class Cliente {
 	private String telefone;
 	private PedidoCliente pedcli;
 	
+	public Cliente(String codigo, String nome, String endereco, String cidade, String estado, String cep, String telefone, PedidoCliente pedcli) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.cep = cep;
+		this.telefone = telefone;
+		this.pedcli = pedcli;
+	}
+	
 	// Getters e Setters
 	public String getCodigo() {
 		return codigo;

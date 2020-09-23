@@ -8,6 +8,16 @@ public class Livro {
 	private float preco;
 	private String codfornecedor;
 	
+	
+	public Livro(String codigo, String titulo, String autor, String iSBN, float preco, String codfornecedor) {
+		this.codigo = codigo;
+		this.titulo = titulo;
+		this.autor = autor;
+		ISBN = iSBN;
+		this.preco = preco;
+		this.codfornecedor = codfornecedor;
+	}
+	
 	// Getters e Setters
 	public String getCodigo() {
 		return codigo;
