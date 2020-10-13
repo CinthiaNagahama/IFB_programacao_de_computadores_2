@@ -9,7 +9,6 @@ import java.util.List;
 import model.Empregado;
 
 public class EmpregadoDAOImp implements EmpregadoDAO{
-
 	@Override
 	public String inserir(Empregado emp) {
 		String sql = "insert into empregado(cpf, nome, idade, salario) values (?,?,?,?)";

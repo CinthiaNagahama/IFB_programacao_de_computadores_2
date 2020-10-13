@@ -15,6 +15,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.Action;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class FrmPrincipal extends JFrame {
 	private JPanel contentPane;
@@ -64,6 +66,15 @@ public class FrmPrincipal extends JFrame {
 			}
 		});
 		menuCadastro.add(menuItemEmpregado);
+		
+		JMenuItem menuItemDependente = new JMenuItem("Dependente");
+		menuItemDependente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				FrmDependente fd = new FrmDependente();
+				fd.setVisible(true);
+			}
+		});
+		menuCadastro.add(menuItemDependente);
 		menuCadastro.add(menuItemSair);
 		
 		contentPane = new JPanel();

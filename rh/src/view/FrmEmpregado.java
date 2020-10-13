@@ -159,7 +159,7 @@ public class FrmEmpregado extends JFrame {
 	 */
 	public FrmEmpregado() {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 593, 385);
+		setBounds(100, 100, 590, 385);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
