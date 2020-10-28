@@ -3,7 +3,7 @@ package model;
 import java.time.LocalDate;
 
 public class Cliente {
-	private int codCliente;
+	private Integer codCliente;
 	private String nomeCliente;
 	private String rgCliente;
 	private String enderecoCliente;

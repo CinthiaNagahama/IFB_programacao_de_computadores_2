@@ -9,7 +9,7 @@ public class ConnectionFactory {
 		String driver = "org.postgresql.Driver";
 		String user = "postgres";
 		String password = "<senha>";
-		String url = "jdbc:postgresql://127.0.0.1:5432/rh";
+		String url = "jdbc:postgresql://127.0.0.1:5432/clube";
 		Connection con = null;
 		
 		try {

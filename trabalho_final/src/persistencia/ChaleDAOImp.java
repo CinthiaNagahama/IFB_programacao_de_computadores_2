@@ -13,14 +13,15 @@ public class ChaleDAOImp implements ChaleDAO{
 	@Override
 	public String inserir(Chale c) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("insert into chale (localizacao, capacidade, valor_alta_estacao, valor_baixa_estacao) values (?,?,?,?)");
+		sql.append("insert into chales(cod_chale,localizacao,capacidade,valor_alta_estacao,valor_baixa_estacao) values (?,?,?,?,?)");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
-			pst.setString(1, c.getLocalizacao());
-			pst.setInt(2, c.getCapacidade());
-			pst.setDouble(3, c.getValorAltaEstacao());
-			pst.setDouble(4, c.getValorBaixaEstacao());
+			pst.setInt(1, c.getCodChale());
+			pst.setString(2, c.getLocalizacao());
+			pst.setInt(3, c.getCapacidade());
+			pst.setDouble(4, c.getValorAltaEstacao());
+			pst.setDouble(5, c.getValorBaixaEstacao());
 			
 			int res = pst.executeUpdate();
 			if(res > 0) return "Inserido com sucesso!!!";
@@ -36,7 +37,7 @@ public class ChaleDAOImp implements ChaleDAO{
 	@Override
 	public String alterar(Chale c) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("update chale set localizacao=?, capacidade=?, valor_alta_estacao=?, valor_baixa_estacao=? where cod_chale=?");
+		sql.append("update chales set localizacao=?, capacidade=?, valor_alta_estacao=?, valor_baixa_estacao=? where cod_chale=?");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
@@ -60,7 +61,7 @@ public class ChaleDAOImp implements ChaleDAO{
 	@Override
 	public String excluir(Chale c) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("delete from chale where cod_chale=?");
+		sql.append("delete from chales where cod_chale=?");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
@@ -80,7 +81,7 @@ public class ChaleDAOImp implements ChaleDAO{
 	@Override
 	public List<Chale> listarTodos() {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select * from chale order by cod_chale");
+		sql.append("select * from chales order by cod_chale");
 		Connection con = ConnectionFactory.getConnection();
 		List <Chale> lista = new ArrayList<Chale>();
 		try {

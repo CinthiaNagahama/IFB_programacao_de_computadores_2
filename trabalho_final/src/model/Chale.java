@@ -1,11 +1,11 @@
 package model;
 
 public class Chale {
-	private int codChale;
+	private Integer codChale;
 	private String localizacao;
-	private int capacidade;
-	private double valorAltaEstacao;
-	private double valorBaixaEstacao;
+	private Integer capacidade;
+	private Double valorAltaEstacao;
+	private Double valorBaixaEstacao;
 	
 	public Chale() {}
 

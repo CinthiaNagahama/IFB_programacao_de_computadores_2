@@ -3,14 +3,14 @@ package model;
 import java.time.LocalDate;
 
 public class Hospedagem {
-	private int codHospedagem;
-	private int codChale;
+	private Integer codHospedagem;
+	private Integer codChale;
 	private String estado;
 	private LocalDate dataInicio;
 	private LocalDate dataFim;
-	private int qtdPessoas;
-	private double desconto;
-	private double valorFinal;
+	private Integer qtdPessoas;
+	private Double desconto;
+	private Double valorFinal;
 	
 	public Hospedagem() {}
 
