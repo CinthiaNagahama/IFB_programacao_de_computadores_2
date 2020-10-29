@@ -33,8 +33,5 @@ public class Teste {
 				}
 			}
 		}
-		else {
-			System.out.println("Erro de conexão.");
-		}
 	}
 }
