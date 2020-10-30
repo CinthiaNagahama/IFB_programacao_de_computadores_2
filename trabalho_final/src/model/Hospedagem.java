@@ -69,6 +69,6 @@ public class Hospedagem {
 		return valorFinal;
 	}
 	public void setValorFinal(double valorFinal) {
-		this.valorFinal = valorFinal;
+		this.valorFinal = valorFinal - this.getDesconto() * valorFinal;
 	}
 }

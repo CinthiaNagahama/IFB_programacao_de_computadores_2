@@ -8,14 +8,13 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Cliente;
 import model.Hospedagem;
 
 public class HospedagemDAOImp implements HospedagemDAO{
 	@Override
 	public String inserir(Hospedagem h) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("insert into hospedagens(cod_hospedagem, cod_chale, estado, data_inicio, data_fim, quantidade_pessoas, descontos, valor_final) values(?,?,?,?,?,?,?,?)");
+		sql.append("insert into hospedagens(cod_hospedagem, cod_chale, estado, data_inicio, data_fim, quantidade_pessoas, desconto, valor_final) values(?,?,?,?,?,?,?,?)");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
@@ -42,18 +41,18 @@ public class HospedagemDAOImp implements HospedagemDAO{
 	@Override
 	public String alterar(Hospedagem h) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("update hospedagens set cod_hospedagem=?, cod_chale=?, estado=?, data_inicio=?, data_fim=?, quantidade_pessoas=?, descontos=?, valor_final=?");
+		sql.append("update hospedagens set cod_chale=?, estado=?, data_inicio=?, data_fim=?, quantidade_pessoas=?, desconto=?, valor_final=? where cod_hospedagem=?");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
-			pst.setInt(1, h.getCodHospedagem());
-			pst.setInt(2, h.getCodChale());
-			pst.setString(3, h.getEstado());
-			pst.setObject(4, h.getDataInicio());
-			pst.setObject(5, h.getDataFim());
-			pst.setInt(6, h.getQtdPessoas());
-			pst.setDouble(7, h.getDesconto());
-			pst.setDouble(8, h.getValorFinal());
+			pst.setInt(8, h.getCodHospedagem());
+			pst.setInt(1, h.getCodChale());
+			pst.setString(2, h.getEstado());
+			pst.setObject(3, h.getDataInicio());
+			pst.setObject(4, h.getDataFim());
+			pst.setInt(5, h.getQtdPessoas());
+			pst.setDouble(6, h.getDesconto());
+			pst.setDouble(7, h.getValorFinal());
 			int res = pst.executeUpdate();
 			if(res > 0) return "Alterado com sucesso!!!";
 			else return "Erro ao alterar";

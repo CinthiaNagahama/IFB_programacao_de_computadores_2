@@ -122,7 +122,7 @@ public class ClienteDAOImp implements ClienteDAO{
 	@Override
 	public Cliente pesquisarPorRG(String rg) {
 		StringBuilder sql = new StringBuilder();
-		sql.append("select * from clientes where cod_cliente=?");
+		sql.append("select * from clientes where rg_cliente=?");
 		Connection con = ConnectionFactory.getConnection();
 		try {
 			PreparedStatement pst = con.prepareStatement(sql.toString());
