@@ -197,7 +197,7 @@ public class FrmChale extends JFrame {
 		btnLimpar.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
 		JButton btnSair = new JButton("Sair");
-		btnLimpar.addMouseListener(new MouseAdapter() {
+		btnSair.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				FrmChale.this.dispose();
